@@ -21,10 +21,15 @@ class circular:
     def insertionAtStart(self,value):
         temp=Node(value)
         t=self.head
-        if self.head == None:
+        if self.head is None:
             self.head=temp
+            temp.next=self.head
             return
-
+        while t.next!=self.head:
+            t=t.next
+        temp.next=self.head
+        t.next=temp
+        self.head=temp
 
     def insertionBasedValue(self,value,x):
         temp=Node(value)

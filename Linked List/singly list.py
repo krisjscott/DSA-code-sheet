@@ -45,10 +45,21 @@ class singlylinkedlist:
                 temp.next=t.next
                 t.next=temp
             t=t.next
+    def reverse(self):
+        prev, start = None, self.head
+        while start:
+            temp=start.next
+            start.next=prev
+            prev=start
+            start=temp
+        while(prev.next!=None):
+            print(prev.data, end = " --> ")
+            prev=prev.next
+        print(prev.data)
     def printLL(self):
         t = self.head
         while(t.next!=None):
-            print(t.data)
+            print(t.data, end = " --> ")
             t=t.next
         print(t.data)
 
@@ -58,8 +69,10 @@ obj.insertAtEnd(20)
 obj.insertAtEnd(30)
 obj.insertAtBegining(5)
 obj.insertAtMiddle(40,20)
-obj.deleteValue(30)
+# obj.deleteValue(30)
 obj.printLL()
+obj.reverse()
+
 
 
 

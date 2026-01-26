@@ -75,6 +75,39 @@ def reverse(n):
     reversed = fun(number, size)
     return -reversed if n<0 else reversed
 
+def palindrome_num(n):
+    if n<0:
+        return False
+    def fn(n, length):
+        if n<10:
+            return n
+        last_num=n%10
+        return last_num*(10**(length-1))+fn(n//10,length-1)
+    num = n
+    # print(num)
+    size=len(str(num))
+    # if n<0:
+    #     reversed = -fn(num,size)
+    reversed = fn(num,size)
+    print (reversed)
+    print (n)
+    return reversed == n 
+
+def summ(array):
+    def sum_of_arrays(array, length):
+        if length == 1:
+            return array[length-1]
+        elif length == 0:
+            return 0
+        addition = array[length-1] + sum_of_arrays(array,length-1)
+        return addition  
+    
+    size=len(array)
+    total = sum_of_arrays(array,size)
+    # print(size)
+    return total
+    
+    
 # print(factorial(5))
 # print(fibbonaci(7))
 # print(sum_of_first(10))
@@ -84,4 +117,6 @@ def reverse(n):
 # print(fibbonaci_vari(4))
 # print(digits_sum(123))
 # print(count(11))
-print(reverse(112))
+# print(reverse(-345))
+# print(palindrome_num(121))
+print(summ([]))

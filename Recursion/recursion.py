@@ -150,4 +150,4 @@ def target(arr, target):
 # print(summ([]))
 # print(maximum([100,240,199,348,271]))
 # print(sorted_arr([1,2,3,2]))
-print(target([1,2,3,2,1,5],2))
+# print(target([1,2,3,2,1,5],2))

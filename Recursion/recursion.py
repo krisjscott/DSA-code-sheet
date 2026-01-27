@@ -106,8 +106,36 @@ def summ(array):
     total = sum_of_arrays(array,size)
     # print(size)
     return total
-    
-    
+
+def maximum(n):
+    def maxi(n,length):
+        if length == 1:
+           return n[len-1]
+        elif length == 0:
+            return 0
+        value = max(n[length-1],maxi(n,length-1))
+        return value
+
+    size = len(n)
+    maximum_val = maxi(n,size)
+    return maximum_val 
+
+def sorted_arr(array : list) -> bool:
+    def sort_check(n,l):
+        if l == 0 or l == 1:
+            return True
+        return sort_check(n,l-1) and n[l-2]<=n[l-1]
+        
+    length = len(array)
+    sorted = sort_check(array, length)
+    return sorted 
+
+def target(arr, target):
+    def count(arr,l):
+        if l==0:
+            return 0
+        return count(arr,l-1) + (1 if arr[l-1] == target else 0)
+    return count(arr,len(arr))
 # print(factorial(5))
 # print(fibbonaci(7))
 # print(sum_of_first(10))
@@ -119,4 +147,7 @@ def summ(array):
 # print(count(11))
 # print(reverse(-345))
 # print(palindrome_num(121))
-print(summ([]))
+# print(summ([]))
+# print(maximum([100,240,199,348,271]))
+# print(sorted_arr([1,2,3,2]))
+# print(target([1,2,3,2,1,5],2))

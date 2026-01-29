@@ -136,6 +136,16 @@ def target(arr, target):
             return 0
         return count(arr,l-1) + (1 if arr[l-1] == target else 0)
     return count(arr,len(arr))
+
+def remove(string : str, ch: str ):
+    def checker(s, l):
+        if l==0:
+            return ""
+        # s=list(s)
+        new =  checker(s,l-1) + ("" if s[l-1] == ch else s[l-1])
+        # print(type(new))
+        return new
+    return checker(string, len(string))
 # print(factorial(5))
 # print(fibbonaci(7))
 # print(sum_of_first(10))
@@ -150,4 +160,5 @@ def target(arr, target):
 # print(summ([]))
 # print(maximum([100,240,199,348,271]))
 # print(sorted_arr([1,2,3,2]))
-print(target([1,2,3,2,1,5],2))
+# print(target([1,2,3,2,1,5],2))
+print(remove("a b a b"," "))

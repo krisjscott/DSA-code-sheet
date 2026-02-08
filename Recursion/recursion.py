@@ -161,4 +161,4 @@ def remove(string : str, ch: str ):
 # print(maximum([100,240,199,348,271]))
 # print(sorted_arr([1,2,3,2]))
 # print(target([1,2,3,2,1,5],2))
-print(remove("a b a b"," "))
+# print(remove("a b a b"," "))

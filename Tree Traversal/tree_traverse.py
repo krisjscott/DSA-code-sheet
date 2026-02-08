@@ -5,7 +5,7 @@ class Node:
         self.data = value
     
     def preOrder(self):
-        print(self.data, end =" ")
+        print(self.data, end ="  ")
         if self.left:
             self.left.preOrder()
         if self.right:

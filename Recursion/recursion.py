@@ -146,6 +146,13 @@ def remove(string : str, ch: str ):
         # print(type(new))
         return new
     return checker(string, len(string))
+
+def subsequence(string : str):
+    def printer(s,l):
+        if l==0:
+            return ""
+        return 
+    
 # print(factorial(5))
 # print(fibbonaci(7))
 # print(sum_of_first(10))

@@ -42,7 +42,7 @@ root = insert(root,12)
 root = insert(root,18)
 root = insert(root,25)
 root = insert(root,50)
-target_value = 40
+target_value = int(input("Enter a number: "))
 found_node = search(root, target_value)
 
 if found_node:
@@ -50,13 +50,7 @@ if found_node:
 else:
     print(f"Element {target_value} not found.")
 
-target_value_missing = 99
-found_node_missing = search(root, target_value_missing)
 
-if found_node_missing:
-    print(f"Element {target_value_missing} found in the tree.")
-else:
-    print(f"Element {target_value_missing} not found.")
 # Inorder(root)
 # root.Inorder()
 # print()
